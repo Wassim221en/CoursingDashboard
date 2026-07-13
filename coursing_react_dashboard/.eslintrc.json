@@ -1,0 +1,40 @@
+{
+  "root": true,
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:react/recommended",
+    // "plugin:@typescript-eslint/recommended",
+    // "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "rules": {
+    "linebreak-style": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      2,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "react/function-component-definition": "off",
+    "object-curly-newline": "off",
+    "no-param-reassign": "off",
+    "import/no-cycle": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "implicit-arrow-linebreak": "off",
+    "@typescript-eslint/indent": "off",
+    "react/jsx-curly-newline": "off",
+    "import/prefer-default-export": "warn",
+    "react/require-default-props": "off",
+    "operator-linebreak": "off",
+    "function-paren-newline": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/prop-types": "off",
+    "no-underscore-dangle": "off"
+  },
+  "parserOptions": {
+    "files": ["*.ts", "*.tsx"],
+    "project": "./tsconfig.json"
+  }
+}

@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Tajawal-Regular';
+  src: local('Tajawal-Regular'),
+    url('/assets/fonts/Tajawal/Tajawal-Medium.ttf') format('truetype');
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+.css-1if8ao-MuiTooltip-tooltip {
+  max-height: 20px;
+  width: fit-content;
+}
+
+.Mui-TableHeadCell-Content-Wrapper {
+  font-family: 'Tajawal-Regular' !important;
+}
+
+/* scrollbar styles*/
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a8a8a8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777777;
+}
+@media print {
+  /* Styles for printed content */
+  .hide-on-print {
+    display: none;
+    visibility: hidden;
+  }
+}
