@@ -1,0 +1,15 @@
+services:
+  coursing_dashboard_stage:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: coursing_dashboard_stage
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:4173:4173"
+    networks:
+      - infra_net
+
+networks:
+  infra_net:
+    external: true
