@@ -1,8 +1,6 @@
 services:
   coursing_dashboard_stage:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ${IMAGE_NAME}:${IMAGE_TAG}
     container_name: coursing_dashboard_stage
     restart: unless-stopped
     ports:

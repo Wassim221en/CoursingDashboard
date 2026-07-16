@@ -3,6 +3,7 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable react/function-component-definition */
 import { FC, memo } from 'react';
+import type { HTMLAttributes, Key } from 'react';
 import { Autocomplete, createFilterOptions, TextField } from '@mui/material';
 import { TAutoComplete } from './types';
 import AutoCompleteInputAddButton from '../auto-completeInput-add-button/auto-completeInput-add-button.component';
@@ -81,11 +82,17 @@ const GenericAutoComplete: FC<GenericAutoCompleteProps> = ({
 
       return filtered;
     }}
-    renderOption={({ key, ...prps }, option) => (
-      <li key={key} {...prps}>
-        {option.name}
-      </li>
-    )}
+    renderOption={(optionProps, option) => {
+      const { key, ...prps } = optionProps as HTMLAttributes<HTMLLIElement> & {
+        key: Key;
+      };
+
+      return (
+        <li key={key} {...prps}>
+          {option.name}
+        </li>
+      );
+    }}
     {...props}
     renderInput={(params) => (
       <TextField
