@@ -27,7 +27,7 @@ function LessonCard({
 }: Props) {
   const playVideoUrl = 'assets/images/play-video.png';
   const [openYoutubeModal, setOpenYoutubeModal] = useState(false);
-  const videoLink = encodeURI(/*getImageServerLink(*/item.videoUrl/*)*/);
+  const videoLink = item.videoUrl;
   const handleCloseYoutubeModal = () => {
     setOpenYoutubeModal(false);
   };

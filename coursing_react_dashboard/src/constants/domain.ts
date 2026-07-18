@@ -4,7 +4,7 @@ function normalizeOrigin(url: string | undefined): string | null {
   return t.endsWith('/') ? t : `${t}/`;
 }
 
-const FALLBACK_ORIGIN = 'https://api.course-ing.com/';
+const FALLBACK_ORIGIN = 'https://coursing.stage.api.wpify.site/';
 
 const origin =
   normalizeOrigin(import.meta.env.VITE_API_ORIGIN) ?? FALLBACK_ORIGIN;
