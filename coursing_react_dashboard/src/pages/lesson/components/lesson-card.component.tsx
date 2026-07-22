@@ -58,7 +58,7 @@ function LessonCard({
 
             {/* <VideoThumbnailGenerator videoUrl={videoLink} /> */}
             <LazyLoadImage
-              src={getImageServerLink(item.thumbnail)}
+              src={item.thumbnail}
               style={{
                 objectFit: 'cover',
                 width: '100%',
