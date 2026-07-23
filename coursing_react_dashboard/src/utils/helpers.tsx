@@ -87,7 +87,7 @@ export const convertPhotoUrlToFileUploaderFile = (
   name: photoUrl,
   size: 0,
   type: helperFunctions().fileExtensionToName(getFileExtFromUrl(photoUrl)),
-  url: getImageServerLink(photoUrl),
+  url: photoUrl,
 });
 
 export const isExpiredToken = (expiration: string) =>

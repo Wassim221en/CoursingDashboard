@@ -5,11 +5,7 @@ import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom';
 import routesNames from 'routes/constants';
-import {
-  getImageServerLink,
-  sanitizeHtml,
-  truncateString,
-} from 'utils/helpers';
+import { sanitizeHtml, truncateString } from 'utils/helpers';
 
 const CARD: SxProps = {
   boxShadow:
@@ -82,7 +78,7 @@ function SubjectCard({
         to={`${routesNames.collegeSubjectsDetails}?collegeId=${collegeId}&subject=${item.id}`}
       >
         <LazyLoadImage
-          src={getImageServerLink(item?.filesUrls[0] ?? '')}
+          src={item?.filesUrls[0] ?? ''}
           style={{
             borderRadius: 4,
             width: '100%',

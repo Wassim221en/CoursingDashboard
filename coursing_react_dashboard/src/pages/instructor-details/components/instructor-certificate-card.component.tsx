@@ -8,7 +8,6 @@ import {
 } from '@mui/material';
 import { IInstructorCertificate } from 'apis/instructor/instructor.interfaces';
 import ActionCellButtons from 'components/common/action-cell-buttons/action-cell-buttons.component';
-import { getImageServerLink } from 'utils/helpers';
 
 type Props = {
   item: IInstructorCertificate;
@@ -30,7 +29,7 @@ function InstructorCertificateCard({
           aspectRatio: '16 / 9',
         }}
         component="img"
-        image={getImageServerLink(fileUrl)}
+        image={fileUrl}
         alt={`${name}`}
       />
       <CardContent>

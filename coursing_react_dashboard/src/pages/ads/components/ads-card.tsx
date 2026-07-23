@@ -5,7 +5,6 @@ import { AdsType } from 'constants/constants';
 import { getNameById } from 'hooks/use-generic-form/helpers';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { getImageServerLink } from 'utils/helpers';
 
 type Props = {
   ads: IAds;
@@ -23,7 +22,7 @@ function AdsCard({ ads, handleEditClick, handleRemoveClick }: Props) {
       }}
     >
       <CardMedia
-        image={getImageServerLink(ads.coverImageUrl)}
+        image={ads.coverImageUrl}
         sx={{
           width: '100%',
           aspectRatio: '16 / 9',

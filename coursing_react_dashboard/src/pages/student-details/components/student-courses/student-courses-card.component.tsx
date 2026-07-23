@@ -8,7 +8,7 @@ import {
   CircularProgress,
 } from '@mui/material';
 import { ICourse } from 'apis/course/course.interfaces';
-import { generateFriendlyDate, getImageServerLink } from 'utils/helpers';
+import { generateFriendlyDate } from 'utils/helpers';
 import { useTranslation } from 'react-i18next';
 
 type Props = {
@@ -26,7 +26,7 @@ function StudentCoursesCard({ item }: Props) {
           aspectRatio: '1 / 1',
         }}
         component="img"
-        image={getImageServerLink(coverUrl) || '/assets/images/book.png'}
+        image={coverUrl || '/assets/images/book.png'}
         alt={`${title} cover`}
       />
       <CardContent>

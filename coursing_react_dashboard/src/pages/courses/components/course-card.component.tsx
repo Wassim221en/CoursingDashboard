@@ -10,7 +10,6 @@ import {
   Button,
 } from '@mui/material';
 import { ICourse } from 'apis/course/course.interfaces';
-import { getImageServerLink } from 'utils/helpers';
 import { useTranslation } from 'react-i18next';
 import courseApi from 'apis/course/course.api';
 import { showSuccess } from 'libs/react.toastify';
@@ -71,7 +70,7 @@ function CourseCard({
               aspectRatio: '1 / 1',
             }}
             component="img"
-            image={getImageServerLink(coverUrl) || '/assets/images/book.png'}
+            image={coverUrl || '/assets/images/book.png'}
             alt={`${title} cover`}
           />
           <CardContent>

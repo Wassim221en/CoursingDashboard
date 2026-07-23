@@ -3,7 +3,7 @@
 import { Box, Card, CardContent, Typography } from '@mui/material';
 import { ILesson } from 'apis/lesson/lesson.interfaces';
 import ActionCellButtons from 'components/common/action-cell-buttons/action-cell-buttons.component';
-import { getImageServerLink, sanitizeHtml } from 'utils/helpers';
+import { sanitizeHtml } from 'utils/helpers';
 import SlowMotionVideoIcon from '@mui/icons-material/SlowMotionVideo';
 import YoutubeModal from 'components/common/youtube-modal';
 import { useState } from 'react';

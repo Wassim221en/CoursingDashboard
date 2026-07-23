@@ -5,7 +5,6 @@ import {
 } from 'apis/video-sections/video-sections.interface';
 import ActionCellButtons from 'components/common/action-cell-buttons/action-cell-buttons.component';
 import React from 'react';
-import { getImageServerLink } from 'utils/helpers';
 
 type Props = {
   videoSection: IVideoSection;
@@ -23,7 +22,7 @@ function VideoSectionCard({
   return (
     <Card>
       <CardMedia
-        image={getImageServerLink(videoSection.imageUrl)}
+        image={videoSection.imageUrl}
         sx={{
           width: '100%',
           aspectRatio: '1/1',
