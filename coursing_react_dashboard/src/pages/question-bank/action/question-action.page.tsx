@@ -16,7 +16,6 @@ import { showSuccess } from 'libs/react.toastify';
 import { MutableRefObject, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { getImageServerLink } from 'utils/helpers';
 import prepareBankQuestion from '../helpers/prepare-bank-question-form-data';
 
 function QuestionActioPage() {
@@ -80,14 +79,14 @@ function QuestionActioPage() {
         //   '🚀🚀🚀🚀🚀🚀🚀 ~ QuestionActioPage ~ files:',
         //   files.length > 0 &&
         //     files.find((f) => f.url)?.url !==
-        //       getImageServerLink(EditData?.imageUrl || ''),
+        //       EditData?.imageUrl || '',
         //   files.find((f) => f.url)?.url,
-        //   getImageServerLink(EditData?.imageUrl || ''),
+        //   EditData?.imageUrl || '',
         // );
         await QuestionApi.updateQuestion(payload);
         if (
           files.find((f) => f.url)?.url !==
-          getImageServerLink(EditData?.imageUrl || '')
+          (EditData?.imageUrl || '')
         ) {
           await QuestionApi.UpdateQuestionImage(
             formData,

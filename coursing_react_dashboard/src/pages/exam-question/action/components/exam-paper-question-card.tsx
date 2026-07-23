@@ -5,7 +5,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import PanoramaFishEyeIcon from '@mui/icons-material/PanoramaFishEye';
 import parse from 'html-react-parser';
 import CellImage from 'components/common/cell-image/cell-image.component';
-import { getImageServerLink } from 'utils/helpers';
 import { TQuestionState } from '../action';
 
 type Props = {

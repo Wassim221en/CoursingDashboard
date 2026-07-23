@@ -166,7 +166,6 @@ function UniversityPage() {
         header: t('universities.image'),
         Cell: ({ cell }) => (
           <CellImage
-            absoluteUrl={!cell.getValue<string>()?.length}
             imageSrc={
               cell.getValue<string>()?.length
                 ? cell.getValue<string>()

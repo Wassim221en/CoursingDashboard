@@ -10,7 +10,7 @@ import {
   Typography,
 } from '@mui/material';
 import { IAttachments } from 'apis/attachments/attachments.interfaces';
-import { getImageServerLink, getFileType } from 'utils/helpers';
+import { getFileType } from 'utils/helpers';
 import { Link } from 'react-router-dom';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -64,7 +64,7 @@ function AttachmentsCard({
               aspectRatio: '1 / 1',
             }}
             component="img"
-            image={getImageServerLink(fileUrl)}
+            image={fileUrl}
             alt={`${title} cover`}
           />
         ) : (
@@ -77,7 +77,7 @@ function AttachmentsCard({
             }}
             textAlign="center"
           >
-            <Link to={getImageServerLink(fileUrl)} target="_blank">
+            <Link to={fileUrl} target="_blank">
               <Box>{fileIcons}</Box>
               <Typography
                 gutterBottom
@@ -109,14 +109,14 @@ function AttachmentsCard({
               showDeletingSpinner={!!showProgressSpinner}
             />
 
-            <Link to={getImageServerLink(fileUrl)} target="_blank">
+            <Link to={fileUrl} target="_blank">
               <Tooltip title="View File">
                 <IconButton color="warning">
                   <VisibilityIcon />
                 </IconButton>
               </Tooltip>
             </Link>
-            <Link to={getImageServerLink(fileUrl)} target="_self" download>
+            <Link to={fileUrl} target="_self" download>
               <Tooltip title="download File">
                 <IconButton color="info">
                   <DownloadIcon />

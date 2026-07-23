@@ -1,7 +1,6 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { getImageServerLink } from "utils/helpers";
 import Typography from "@mui/material/Typography";
 
 function TableImages({ images }: { images: string[] }) {
@@ -14,7 +13,7 @@ function TableImages({ images }: { images: string[] }) {
       {images.map((image) => (
         <Grid key={image} item xs={12} md={4}>
           <LazyLoadImage
-            src={getImageServerLink(image)}
+            src={image}
             style={{
               objectFit: "cover",
               width: "100%",

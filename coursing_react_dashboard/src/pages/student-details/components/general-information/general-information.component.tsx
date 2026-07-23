@@ -4,7 +4,6 @@ import { IStudentDetails } from 'apis/student/student.interfaces';
 import { StudentGender, studentType } from 'constants/constants';
 import { getNameById } from 'hooks/use-generic-form/helpers';
 import { useTranslation } from 'react-i18next';
-import { getImageServerLink } from 'utils/helpers';
 
 type Props = {
   studentInfo: IStudentDetails | null;
@@ -42,7 +41,7 @@ function GeneralInformationSection({ studentInfo }: Props) {
           component="img"
           image={
             studentInfo?.imageUrl?.length
-              ? getImageServerLink(String(studentInfo?.imageUrl))
+              ? String(studentInfo?.imageUrl)
               : '/assets/images/book.png'
           }
           alt="Profile Pictiure"

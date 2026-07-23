@@ -9,7 +9,7 @@ import QuestionApi from 'apis/qusetions/questions.api';
 import { showSuccess } from 'libs/react.toastify';
 import { useLocation, useNavigate } from 'react-router-dom';
 import GenericTablePage from 'components/common/generic-table-page/generic-table-page.component';
-import { getImageServerLink, sanitizeHtml } from 'utils/helpers';
+import { sanitizeHtml } from 'utils/helpers';
 import { MRT_ColumnDef } from 'material-react-table';
 import { getNameById } from 'hooks/use-generic-form/helpers';
 import {
@@ -230,7 +230,7 @@ function QuestionsBank({ extendedPageTitle }: Props) {
             sx={{ display: 'flex', alignItems: 'center', gap: 2 }}
             fontSize={16}
           >
-            {!!imageUrl && <Avatar src={getImageServerLink(imageUrl)} />}
+            {!!imageUrl && <Avatar src={imageUrl} />}
             {sanitizeHtml(getValue<string>())}
           </Box>
         ),
