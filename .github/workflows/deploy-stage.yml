@@ -9,7 +9,7 @@ on:
 permissions:
   contents: read
   packages: write
-
+ 
 env:
   NODE_VERSION: "20"
   APP_PATH: "./coursing_react_dashboard"
