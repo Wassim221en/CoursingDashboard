@@ -1,7 +1,7 @@
 services:
-  coursing_dashboard_stage:
+  coursing_dashboard_production:
     image: ${IMAGE_NAME}:${IMAGE_TAG}
-    container_name: coursing_dashboard_stage
+    container_name: coursing_dashboard_production
     restart: unless-stopped
     ports:
       - "4173"

@@ -1,9 +1,9 @@
-name: Deploy Frontend Stage to VPS
+name: Deploy Frontend Production to VPS
 
 on:
   push:
     branches:
-      - stage
+      - production
   workflow_dispatch:
 
 permissions:
@@ -16,7 +16,7 @@ env:
   DOCKERFILE_PATH: "./coursing_react_dashboard/Dockerfile"
   BUILD_CONTEXT: "./coursing_react_dashboard"
   COMPOSE_FILE_PATH: "coursing_react_dashboard/docker-compose.yml"
-  DEPLOY_PATH: "/srv/projects/coursing_app/stage/front_end/"
+  DEPLOY_PATH: "/srv/projects/coursing_app/production/front_end/"
 
 jobs:
   deploy:
@@ -49,7 +49,7 @@ jobs:
         shell: bash
         run: |
           IMAGE_NAME="ghcr.io/${GITHUB_REPOSITORY,,}"
-          IMAGE_TAG="stage-latest"
+          IMAGE_TAG="production-latest"
 
           echo "IMAGE_NAME=$IMAGE_NAME" >> "$GITHUB_ENV"
           echo "IMAGE_TAG=$IMAGE_TAG" >> "$GITHUB_ENV"
