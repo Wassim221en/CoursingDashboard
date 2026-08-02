@@ -97,6 +97,6 @@ jobs:
             IMAGE_TAG=${{ env.IMAGE_TAG }}
             EOF
 
-            docker compose pull
-            docker compose up -d --remove-orphans
+            docker compose -p coursing-production pull
+            docker compose -p coursing-production up -d
             docker image prune -af
