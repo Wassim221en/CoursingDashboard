@@ -17,10 +17,16 @@ export interface IEducationalLevelPayload {
   gradesIds: number[];
 }
 
+export type TEducationalLevelGrade = TAutoComplete & {
+  /** Position inside the level (grades arrive sorted by it). */
+  order?: number;
+  educationLevelId?: number;
+};
+
 export interface IEducationalLevelDetails {
   id?: number;
   name: string;
-  grades: TAutoComplete[];
+  grades: TEducationalLevelGrade[];
 }
 
 export interface IGetEducationalLevelPayload {}

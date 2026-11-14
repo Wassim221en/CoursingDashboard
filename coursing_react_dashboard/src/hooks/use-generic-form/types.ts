@@ -83,6 +83,7 @@ export type TInput<T extends FieldValues> = {
       moreThan?: string;
       label: string;
       disabled?: boolean;
+      helperText?: string;
       onChange?: (number: string) => void;
     }
   | {
@@ -92,6 +93,7 @@ export type TInput<T extends FieldValues> = {
       label: string;
       disabled?: boolean;
       handleAddClick?: () => void;
+      disableClearable?: boolean;
       freeSolo?: boolean;
       hidden?: boolean;
       onChange?: (val: TAutoComplete | null) => void;
