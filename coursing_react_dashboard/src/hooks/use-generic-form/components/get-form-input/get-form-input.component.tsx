@@ -82,6 +82,7 @@ function GetFormInput<T extends FieldValues>({
           required={input.required}
           disabled={input.disabled}
           hidden={input.hidden}
+          helperText={input.helperText}
           onValChange={input.onChange}
         />
       );
@@ -126,6 +127,7 @@ function GetFormInput<T extends FieldValues>({
           freeSolo={input.freeSolo}
           multiple={input.isMulti}
           hidden={input.hidden}
+          disableClearable={input.disableClearable}
         />
       );
       break;

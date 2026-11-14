@@ -15,6 +15,7 @@ interface FormTextFieldProps {
   required?: boolean;
   type?: 'number' | 'date' | 'text' | 'password' | 'tel';
   isDuration?: boolean;
+  helperText?: string;
   onValChange?: (val: string) => void;
   [key: string]: any;
 }
@@ -31,6 +32,7 @@ function FormTextField({
   addClick,
   handleAddClick,
   isDuration,
+  helperText,
   onValChange,
   ...props
 }: FormTextFieldProps) {
@@ -70,7 +72,7 @@ function FormTextField({
           label={required ? `${label}*` : label}
           {...field}
           error={!!error}
-          helperText={error && error.message}
+          helperText={error ? error.message : helperText}
           type={showPassword ? 'text' : type}
           onChange={
             isDuration

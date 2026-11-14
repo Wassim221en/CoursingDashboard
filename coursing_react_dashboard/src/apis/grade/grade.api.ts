@@ -1,17 +1,15 @@
 import CoursingApiInstance from 'apis/coursing-api.instance';
-import {
-  IPaginationParams,
-  IResponse,
-} from 'apis/global-interfaces/global-interfaces';
+import { IResponse } from 'apis/global-interfaces/global-interfaces';
 import {
   IGrade,
   IGradeSubject,
   IGradeSubjectDetails,
   IGetAllGradesPayload,
+  IGetGradesParams,
 } from './grade.interfaces';
 import GradeApiRoutes from './grade.api-routes';
 
-const getAllGrades = async (params?: IPaginationParams) => {
+const getAllGrades = async (params?: IGetGradesParams) => {
   const { data } = await CoursingApiInstance.get<IResponse<IGrade[]>>(
     GradeApiRoutes.GetAllGrades,
     {

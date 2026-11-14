@@ -276,7 +276,12 @@
     "editGradeSubject": "Edit Grade Subject",
     "description": "Description",
     "image": "Image",
-    "gradeImage": "Grade Image (ratio of the image 16 : 9)"
+    "gradeImage": "Grade Image (ratio of the image 16 : 9)",
+    "educationalLevel": "Educational Level",
+    "order": "Order",
+    "orderHint": "Leave empty to place the grade last",
+    "noLevel": "No level",
+    "filterByEducationalLevel": "Filter by educational level"
   },
   "subjects": {
     "subjects": "Subjects",
