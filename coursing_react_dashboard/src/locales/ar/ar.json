@@ -278,7 +278,12 @@
     "editGradeSubject": "تعديل مادة لصف",
     "description": "الوصف",
     "image": "الصورة",
-    "gradeImage": "صورة الصف (أبعاد الصورة 9  : 16)"
+    "gradeImage": "صورة الصف (أبعاد الصورة 9  : 16)",
+    "educationalLevel": "المستوى التعليمي",
+    "order": "الترتيب",
+    "orderHint": "اتركه فارغاً ليوضع الصف في الآخر",
+    "noLevel": "بدون مستوى",
+    "filterByEducationalLevel": "فلترة حسب المستوى التعليمي"
   },
   "subjects": {
     "subjects": "المواد",

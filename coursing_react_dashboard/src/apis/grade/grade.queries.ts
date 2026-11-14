@@ -1,10 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
-import { IPaginationParams } from 'apis/global-interfaces/global-interfaces';
 import gradeApi from './grade.api';
-import { IGetAllGradesPayload } from './grade.interfaces';
+import { IGetAllGradesPayload, IGetGradesParams } from './grade.interfaces';
 
 const useGradesQuery = (
-  params?: IPaginationParams,
+  params?: IGetGradesParams,
   disabled: boolean = false,
 ) => {
   const queryResult = useQuery(

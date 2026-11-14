@@ -23,8 +23,10 @@ const prepareGradeFormData = ({
     formData.append('urlsForRemove', url);
   });
 
+  // Optional fields (educationLevelId / order) must be left out entirely when
+  // empty: the backend rejects order = 0 and treats a missing order as "last".
   Object.entries(data)?.forEach(([key, value]) => {
-    if (value !== null) {
+    if (value !== null && value !== undefined && value !== '') {
       formData.append(key, String(value));
     }
   });
